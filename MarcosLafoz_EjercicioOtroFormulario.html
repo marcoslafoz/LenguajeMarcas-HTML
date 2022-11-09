@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Otro Formulario - Mlafoz</title>
+	<meta name="Description" content="descripción de la página" />
+	<link rel="stylesheet" type="text/css" href="estilos.css" />
+	<link rel="shortcut icon"
+		href="https://lh3.googleusercontent.com/a/ALm5wu2DCIbcjjRsCOYxH6_Y3_YFSq8H6mZRMIVWgSAAbQ=s288-p-rw-no">
+</head>
+
+<body>
+	<center>
+		<div class="card">
+			<center>
+				<form action="https://httpbin.org/get" method="get">
+					<label>
+						<h2 id="titulo">Ejercicio Formulario</h2>
+					</label>
+					<input type="email" id="topin" placeholder="Email" autofocus><br>
+					<input type="text" placeholder="Nombre y apellidos"><br>
+					<input type="url" placeholder="Url"><br>
+					<label id="etiquetas">Fecha</label><input type="date" placeholder="Fecha"><br>
+					<label id="etiquetas">Hora</label><input type="time" placeholder="Hora"><br>
+					<input type="datetime" placeholder="Fecha y hora"><br>
+					<label id="etiquetas">Mes</label><input type="month" placeholder="Mes"><br>
+					<input type="week" placeholder="Semana"><br>
+					<input type="number" placeholder="Número" min="-10" max="10"><br>
+					<input type="tel" placeholder="Teléfono"><br>
+					<input type="search" placeholder="Búsqueda"><br>
+					<label id="etiquetas">Color favorito</label><input type="color" placeholder="Color favorito"><br>
+					<button type="submit" id="enviar">
+						<div class="svg-wrapper-1">
+							<div class="svg-wrapper">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+									<path fill="none" d="M0 0h24v24H0z"></path>
+									<path fill="currentColor"
+										d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+									</path>
+								</svg>
+							</div>
+						</div>
+						<span>Enviar</span>
+					</button>
+				</form>
+			</center>
+		</div>
+	</center>
+</body>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+	* {
+		margin: 0px;
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	body {
+		color: black;
+		background-color: white;
+	}
+
+	input {
+		margin-top: 20px;
+		text-align: center;
+		padding: 5px;
+		border-radius: 10px;
+		border-color: rgba(0, 0, 0, 0.2);
+	}
+
+	#topin {
+		margin-top: 30px;
+	}
+
+	#titulo {
+		margin-top: 30px;
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	#etiquetas {
+		margin-right: 20px;
+	}
+
+	/* From uiverse.io by @adamgiebl */
+	button {
+		font-family: inherit;
+		font-size: 20px;
+		background: royalblue;
+		color: white;
+		padding: 0.7em 1em;
+		padding-left: 0.9em;
+		display: flex;
+		align-items: center;
+		border: none;
+		border-radius: 16px;
+		overflow: hidden;
+		transition: all 0.2s;
+	}
+
+	button span {
+		display: block;
+		margin-left: 0.3em;
+		transition: all 0.3s ease-in-out;
+	}
+
+	button svg {
+		display: block;
+		transform-origin: center center;
+		transition: transform 0.3s ease-in-out;
+	}
+
+	button:hover .svg-wrapper {
+		animation: fly-1 0.6s ease-in-out infinite alternate;
+	}
+
+	button:hover svg {
+		transform: translateX(1.2em) rotate(45deg) scale(1.1);
+	}
+
+	button:hover span {
+		transform: translateX(5em);
+	}
+
+	button:active {
+		transform: scale(0.95);
+	}
+
+	@keyframes fly-1 {
+		from {
+			transform: translateY(0.1em);
+		}
+
+		to {
+			transform: translateY(-0.1em);
+		}
+	}
+
+	#enviar {
+		margin-top: 35px;
+	}
+
+	.card {
+		width: 280px;
+		height: 800px;
+		border-radius: 30px;
+		background: #ededed;
+		box-shadow: 15px 15px 30px #bebebe,
+			-15px -15px 30px #ffffff;
+		padding-bottom: -30px;
+		padding-top: 10px;
+		margin-top: 30px;
+	}
+</style>
+
+</html>
