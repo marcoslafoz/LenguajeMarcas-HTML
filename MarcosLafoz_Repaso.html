@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Formulario Repaso - Mlafoz</title>
+	<meta name="Description" content="descripción de la página" />
+	<link rel="stylesheet" type="text/css" href="estilos.css" />
+	<link rel="shortcut icon"
+		href="https://lh3.googleusercontent.com/a/ALm5wu2DCIbcjjRsCOYxH6_Y3_YFSq8H6mZRMIVWgSAAbQ=s288-p-rw-no">
+</head>
+
+<body>
+	<center>
+		<fieldset class="form_box">
+			<legend><b>Formulario</b></legend>
+			<form action="http://www.httpbin.org/get" target="_blank" method="get">
+				<label>Nombre</label><input name="nombre" type="text" maxlength="50" autofocus required>
+				<br>
+				<label>Email</label><input name="mail" type="mail" required>
+				<br>
+				<label>Fecha</label><input name="fecha" type="date" required>
+				<br>
+				<label>Telefono</label><input name="telefono" type="tel">
+				<br>
+				<label>Metodo de pago</label><br>
+				<input type="radio" id="PayPal" name="metodo" value="PayPal">
+				<label for="PayPal">PayPal</label>
+				<input type="radio" id="Tarjeta de credito" name="metodo" value="Tarjeta de credito">
+				<label for="Tarjeta de credito">Tarjeta de credito</label>
+				<input type="radio" id="Cuenta bancaria" name="metodo" value="Cuenta bancaria">
+				<label for="Cuenta bancaria">Cuenta bancaria</label>
+				<br>
+				<label>Color</label>
+				<br>
+				<label for="color">Rojo</label><input type="checkbox" name="rojo">
+				<label for="color">Verde</label><input type="checkbox" name="verde">
+				<label for="color">Azul</label><input type="checkbox" name="azul">
+				<br>
+				<button type="submit" id="enviar">
+					<div class="svg-wrapper-1">
+						<div class="svg-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+								<path fill="none" d="M0 0h24v24H0z"></path>
+								<path fill="currentColor"
+									d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+								</path>
+							</svg>
+						</div>
+					</div>
+					<span>Enviar</span>
+				</button>
+
+			</form>
+		</fieldset>
+	</center>
+
+	<!--Estilos-->
+	<style>
+		.form_box {
+			width: 30%;
+			box-sizing: border-box;
+			margin-top: 50px;
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			border-radius: 30px;
+			background: #ededed;
+			box-shadow: 15px 15px 30px #bebebe,
+				-15px -15px 30px #ffffff;
+			padding-bottom: -30px;
+			padding-top: 30px;
+			margin-top: 30px;
+		}
+
+		input,
+		label {
+			margin-bottom: 20px;
+
+			margin-top: 20px;
+			text-align: center;
+			padding: 5px;
+			border-radius: 10px;
+			border-color: rgba(0, 0, 0, 0.2);
+		}
+
+		fieldset {
+			border-radius: 20px;
+			padding-bottom: 40px;
+			padding-top: 40px;
+			margin-top: 50px;
+		}
+
+		label {
+			margin-right: 10px;
+		}
+
+		/* From uiverse.io by @adamgiebl */
+		button {
+			font-family: inherit;
+			font-size: 20px;
+			background: royalblue;
+			color: white;
+			padding: 0.7em 1em;
+			padding-left: 0.9em;
+			display: flex;
+			align-items: center;
+			border: none;
+			border-radius: 16px;
+			overflow: hidden;
+			transition: all 0.2s;
+		}
+
+		button span {
+			display: block;
+			margin-left: 0.3em;
+			transition: all 0.3s ease-in-out;
+		}
+
+		button svg {
+			display: block;
+			transform-origin: center center;
+			transition: transform 0.3s ease-in-out;
+		}
+
+		button:hover .svg-wrapper {
+			animation: fly-1 0.6s ease-in-out infinite alternate;
+		}
+
+		button:hover svg {
+			transform: translateX(1.2em) rotate(45deg) scale(1.1);
+		}
+
+		button:hover span {
+			transform: translateX(5em);
+		}
+
+		button:active {
+			transform: scale(0.95);
+		}
+
+		@keyframes fly-1 {
+			from {
+				transform: translateY(0.1em);
+			}
+
+			to {
+				transform: translateY(-0.1em);
+			}
+		}
+
+		#enviar {
+			margin-top: 35px;
+		}
+
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+		* {
+			margin: 0px;
+			font-family: 'Montserrat', sans-serif;
+		}
+	</style>
+</body>
+
+</html>
